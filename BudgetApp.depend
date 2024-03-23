@@ -1,4 +1,55 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\powal\desktop\programowanie\git\budgetapp\main.cpp
+1711186518 source:c:\users\powal\desktop\programowanie\git\budgetapp\main.cpp
+	<iostream>
+	"BudgetMainApp.h"
+	"Menus.h"
+	"Utils.h"
+	"File.h"
+
+1711151963 source:c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.cpp
+	"BudgetMainApp.h"
+
+1711230744 c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.h
+	"UserManager.h"
+	<iostream>
+
+1711152542 source:c:\users\powal\desktop\programowanie\git\budgetapp\menus.cpp
+	"Menus.h"
+
+1711152278 c:\users\powal\desktop\programowanie\git\budgetapp\menus.h
+	<iostream>
+
+1711151436 source:c:\users\powal\desktop\programowanie\git\budgetapp\utils.cpp
+	"Utils.h"
+
+1711151457 c:\users\powal\desktop\programowanie\git\budgetapp\utils.h
+	<iostream>
+
+1711232559 c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.h
+	<iostream>
+	<vector>
+	"UserFile.h"
+	"User.h"
+
+1711152990 source:c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.cpp
+	"UserManager.h"
+
+1711187161 c:\users\powal\desktop\programowanie\git\budgetapp\file.h
+	<iostream>
+	<fstream>
+
+1711187264 source:c:\users\powal\desktop\programowanie\git\budgetapp\file.cpp
+	"File.h"
+
+1711232456 c:\users\powal\desktop\programowanie\git\budgetapp\userfile.h
+	"File.h"
+	<iostream>
+
+1711187840 source:c:\users\powal\desktop\programowanie\git\budgetapp\userfile.cpp
+
+1711232242 source:c:\users\powal\desktop\programowanie\git\budgetapp\user.cpp
+	"User.h"
+
+1711232269 c:\users\powal\desktop\programowanie\git\budgetapp\user.h
 	<iostream>
 
