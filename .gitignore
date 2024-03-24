@@ -3,3 +3,4 @@ obj/
 plan/
 aplikacja_budzetowa_uml.pdf
 BudgetApp.*
+*.xml

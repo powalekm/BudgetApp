@@ -36,8 +36,12 @@
 		<Unit filename="BudgetMainApp.h" />
 		<Unit filename="File.cpp" />
 		<Unit filename="File.h" />
+		<Unit filename="Markup.cpp" />
+		<Unit filename="Markup.h" />
 		<Unit filename="Menus.cpp" />
 		<Unit filename="Menus.h" />
+		<Unit filename="User.cpp" />
+		<Unit filename="User.h" />
 		<Unit filename="UserFile.cpp" />
 		<Unit filename="UserFile.h" />
 		<Unit filename="UserManager.cpp" />

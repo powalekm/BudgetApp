@@ -3,14 +3,15 @@
 #include "BudgetMainApp.h"
 #include "Menus.h"
 #include "Utils.h"
-#include "File.h"
+#include "UserManager.h"
 
 using namespace std;
 
 int main() {
 
-    BudgetMainApp budgetMainApp("user.xml", "incomes.xml", "expenses.xml");
+    BudgetMainApp budgetMainApp("Users.xml", "Incomes.xml", "Expenses.xml");
     char choice;
+
 
     while(true) {
         if(!budgetMainApp.isUserLoggedIn()) {
@@ -26,6 +27,9 @@ int main() {
                 break;
             case '2':
                 budgetMainApp.registerUser();
+                break;
+            case '3':
+                budgetMainApp.listAllUsers();
                 break;
             case '9':
                 cout << "\nSee you next time.\n";

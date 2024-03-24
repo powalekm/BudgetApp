@@ -14,3 +14,26 @@ char Utils::getCharacter() {
     }
     return character;
 }
+
+string Utils::getLine() {
+    string input = "";
+    cin.sync();
+    while( input == "") {
+        getline(cin, input);
+        if(input == "") {
+            cout << "The input can't be empty, try again: ";
+        }
+    }
+    return input;
+}
+
+bool Utils::stringComparision(string firstString, string secondString) {
+    if(firstString.length() == secondString.length()) {
+        transform(firstString.begin(), firstString.end(), firstString.begin(), ::tolower);
+        transform(secondString.begin(), secondString.end(), secondString.begin(), ::tolower);
+        if (firstString == secondString) {
+            return true;
+        }
+    }
+    return false;
+}
