@@ -20,4 +20,11 @@
 <firstName>Michal</firstName>
 <LastName>Powalek</LastName>
 </user>
+<user>
+<userID>4</userID>
+<login>112</login>
+<password>112</password>
+<firstName>123</firstName>
+<LastName>123</LastName>
+</user>
 </root>

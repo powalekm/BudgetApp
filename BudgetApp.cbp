@@ -32,8 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-<<<<<<< HEAD
-=======
 		<Unit filename="BudgetMainApp.cpp" />
 		<Unit filename="BudgetMainApp.h" />
 		<Unit filename="File.cpp" />
@@ -50,7 +48,6 @@
 		<Unit filename="UserManager.h" />
 		<Unit filename="Utils.cpp" />
 		<Unit filename="Utils.h" />
->>>>>>> recover-branch
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
