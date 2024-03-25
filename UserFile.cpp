@@ -35,19 +35,38 @@ void UserFile::addUserToFile(User user) {
 
     if(xml.FindElem("root")) {
         xml.IntoElem();
-    }else {
+    } else {
         xml.AddElem("root");
         xml.IntoElem();
     }
-        xml.AddElem("user");
+    xml.AddElem("user");
+    xml.IntoElem();
+    xml.AddElem("userID", user.getUserID());
+    xml.AddElem("login", user.getLogin());
+    xml.AddElem("password", user.getPassword());
+    xml.AddElem("firstName", user.getFirstName());
+    xml.AddElem("LastName", user.getLastName());
+    xml.Save(getFileName());
+}
+
+void UserFile::changePassword(User user) {
+    CMarkup xml;
+    xml.Load(getFileName());
+
+    if(xml.FindElem("root")) {
         xml.IntoElem();
-        xml.AddElem("userID", user.getUserID());
-        xml.AddElem("login", user.getLogin());
-        xml.AddElem("password", user.getPassword());
-        xml.AddElem("firstName", user.getFirstName());
-        xml.AddElem("LastName", user.getLastName());
-        //xml.OutOfElem();
-        //xml.OutOfElem();
-        xml.Save(getFileName());
+        xml.FindElem("user");
+        do {
+            xml.IntoElem();
+            xml.FindElem("login");
+            if(xml.GetData() == user.getLogin()) {
+                xml.FindElem("password");
+                xml.SetData(user.getPassword());
+                xml.Save(getFileName());
+                break;
+            }
+            xml.OutOfElem();
+        }   while(xml.FindElem("user"));
     }
+}
 

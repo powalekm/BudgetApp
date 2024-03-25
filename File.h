@@ -16,7 +16,6 @@ public:
     File(string fileName) : FILE_NAME(fileName){}
 
     string getFileName();
-    void checkRootNode();
     bool isFileEmpty();
 };
 #endif

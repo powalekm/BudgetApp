@@ -25,7 +25,9 @@ public:
 
     bool isUserLoggedIn();
     void loginUser();
+    void logout();
     void registerUser();
     void listAllUsers();
+    void changePassword();
 };
 #endif

@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1711317421 source:c:\users\powal\desktop\programowanie\git\budgetapp\main.cpp
+1711319773 source:c:\users\powal\desktop\programowanie\git\budgetapp\main.cpp
 	<iostream>
 	"BudgetMainApp.h"
 	"Menus.h"
 	"Utils.h"
 	"UserManager.h"
 
-1711318285 source:c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.cpp
+1711319789 source:c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.cpp
 	"BudgetMainApp.h"
 
-1711307875 c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.h
+1711319797 c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.h
 	"UserManager.h"
 	<iostream>
 
@@ -26,31 +26,31 @@
 	<iostream>
 	<algorithm>
 
-1711316082 c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.h
+1711319864 c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.h
 	<iostream>
 	<vector>
 	"UserFile.h"
 	"User.h"
 	"Utils.h"
 
-1711317487 source:c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.cpp
+1711390936 source:c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.cpp
 	"UserManager.h"
 
-1711270571 c:\users\powal\desktop\programowanie\git\budgetapp\file.h
+1711319197 c:\users\powal\desktop\programowanie\git\budgetapp\file.h
 	<iostream>
 	<fstream>
 	"Markup.h"
 
-1711277692 source:c:\users\powal\desktop\programowanie\git\budgetapp\file.cpp
+1711319185 source:c:\users\powal\desktop\programowanie\git\budgetapp\file.cpp
 	"File.h"
 
-1711286512 c:\users\powal\desktop\programowanie\git\budgetapp\userfile.h
+1711390949 c:\users\powal\desktop\programowanie\git\budgetapp\userfile.h
 	<iostream>
 	<vector>
 	"User.h"
 	"File.h"
 
-1711315405 source:c:\users\powal\desktop\programowanie\git\budgetapp\userfile.cpp
+1711396756 source:c:\users\powal\desktop\programowanie\git\budgetapp\userfile.cpp
 	"UserFile.h"
 
 1711232242 source:c:\users\powal\desktop\programowanie\git\budgetapp\user.cpp

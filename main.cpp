@@ -46,10 +46,13 @@ int main() {
 
             choice = Utils::getCharacter();
             switch(choice) {
-
+            case '6':
+                budgetMainApp.changePassword();
+                break;
             case '9':
                 cout << "\nSee you next time.\n";
-                //exit(0);
+                budgetMainApp.logout();
+                system("pause");
                 break;
             default:
                 cout << "\nCharacter not used. Please try again.\n" << endl;
