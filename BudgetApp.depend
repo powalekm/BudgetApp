@@ -1,4 +1,81 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1584205420 source:c:\users\powal\desktop\programowanie\git\budgetapp\main.cpp
 	<iostream>
 
+=======
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\main.cpp
+	<iostream>
+	"BudgetMainApp.h"
+	"Menus.h"
+	"Utils.h"
+	"UserManager.h"
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.cpp
+	"BudgetMainApp.h"
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\budgetmainapp.h
+	"UserManager.h"
+	<iostream>
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\menus.cpp
+	"Menus.h"
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\menus.h
+	<iostream>
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\utils.cpp
+	"Utils.h"
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\utils.h
+	<iostream>
+	<algorithm>
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.h
+	<iostream>
+	<vector>
+	"UserFile.h"
+	"User.h"
+	"Utils.h"
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\usermanager.cpp
+	"UserManager.h"
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\file.h
+	<iostream>
+	<fstream>
+	"Markup.h"
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\file.cpp
+	"File.h"
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\userfile.h
+	<iostream>
+	<vector>
+	"User.h"
+	"File.h"
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\userfile.cpp
+	"UserFile.h"
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\user.cpp
+	"User.h"
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\user.h
+	<iostream>
+
+1711398135 c:\users\powal\desktop\programowanie\git\budgetapp\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1711398135 source:c:\users\powal\desktop\programowanie\git\budgetapp\markup.cpp
+	<stdio.h>
+	"Markup.h"
+	<errno.h>
+	<iconv.h>
+	<windows.h>
+	<mbstring.h>
+
+>>>>>>> recover-branch

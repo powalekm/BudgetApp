@@ -2,7 +2,10 @@ bin/
 obj/
 plan/
 aplikacja_budzetowa_uml.pdf
-KsiazkaAdresowa.uxf
-KsiazkaAdresowaObiektowo.*
-Uzytkownicy.txt
-Adresaci.txt
+BudgetApp.cbp
+BudgetApp.cscope_file_list
+BudgetApp.depend
+BudgetApp.layout
+Users.xml
+Incomes.xml
+Expenses.xml
