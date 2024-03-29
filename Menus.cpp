@@ -22,7 +22,15 @@ void Menus::showMainMenu() {
     cout << "4. Balance for previous month" << endl;
     cout << "5. Balance for selected period" << endl;
     cout << "6. Change password" << endl;
-    cout << "9. Logout" << endl;
+    cout << "8. Logout" << endl;
+    cout << "9. Quit" << endl;
     cout << "-----------------------" << endl;
     cout << "Your choice: ";
 }
+
+void Menus::showNewOperationMenu() {
+    cout << "-----------------------" << endl;
+    cout << "1. Input the operation for today's date" << endl;
+    cout << "2. Enter a different date" << endl;
+    cout << "-----------------------" << endl;
+    cout << "Your choice: ";

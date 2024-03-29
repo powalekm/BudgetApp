@@ -37,3 +37,38 @@ bool Utils::stringComparision(string firstString, string secondString) {
     }
     return false;
 }
+
+double Utils::getDouble() {
+    string input = "";
+    string doubleOutput = "";
+    bool isInputCorrect = true;
+    int numberOfSeperators = 0;
+    do {
+        cin.sync();
+        getline(cin, input);
+        isInputCorrect = true;
+        numberOfSeperators = 0;
+        for(unsigned int i = 0; i < input.length(); i++) {
+            if( i == 0 && !isdigit(input[i])) {
+                cout << "The input is not a digit" << endl;
+                isInputCorrect = false;
+                break;
+            } else if( isdigit(input[i]) ) {
+                doubleOutput += input[i];
+            } else if (input[i] == '.' || input[i] == ',') {
+                doubleOutput += '.';
+                numberOfSeperators++;
+                if (numberOfSeperators > 1) {
+                    cout << "The input is in wrong format" << endl;
+                    isInputCorrect = false;
+                    break;
+                }
+            } else {
+                cout << "The input is in wrong format" << endl;
+                isInputCorrect = false;
+                break;
+            }
+        }
+    } while (!isInputCorrect);
+    return stof(doubleOutput);
+}

@@ -10,5 +10,6 @@ public:
     static void showTitle(string title);
     static void showHomeMenu();
     static void showMainMenu();
+    static void showNewOperationMenu();
 };
 #endif
