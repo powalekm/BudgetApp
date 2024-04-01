@@ -23,11 +23,7 @@ int main() {
                 budgetMainApp.loginUser();
                 break;
             case '2':
-                Menus::showTitle("NEW USER");
                 budgetMainApp.registerUser();
-                break;
-            case '3':
-                budgetMainApp.listAllUsers();
                 break;
             case '9':
                 cout << "\nSee you next time.\n";
@@ -45,22 +41,19 @@ int main() {
 
             switch(choice) {
             case '1':
-                Menus::showTitle("ADD INCOME");
                 budgetMainApp.addIncome();
                 break;
             case '2':
-                Menus::showTitle("ADD EXPENSE");
-                //budgetMainApp.addExpense();
+                budgetMainApp.addExpense();
                 break;
             case '3':
-                Menus::showTitle("CURRENT MONTH BALANCE");
                 budgetMainApp.showCurrentMonthBalance();
                 break;
             case '4':
-                //budgetMainApp.showCurrentMonthBalance();
+                budgetMainApp.showPreviousMonthBalance();
                 break;
             case '5':
-                //budgetMainApp.showCurrentMonthBalance();
+                budgetMainApp.showCustomPeriodBalance();
                 break;
             case '6':
                 budgetMainApp.changePassword();

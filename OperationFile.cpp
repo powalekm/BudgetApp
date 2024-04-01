@@ -21,7 +21,7 @@ vector <Operation> OperationFile::loadOperationsFromFile(const int LOGGED_USER_I
             xml.FindElem("item");
             operation.setItem(xml.GetData());
             xml.FindElem("amount");
-            operation.setAmount(stoi(xml.GetData()));
+            operation.setAmount(stod(xml.GetData()));
             if( operation.getUserID() == LOGGED_USER_ID){
                 operations.push_back(operation);
             }
@@ -36,6 +36,7 @@ int OperationFile::getLastOperationID(){
 }
 
 void OperationFile::addOperationToFile(Operation operation){
+    stringstream amount;
     CMarkup xml;
     xml.Load(getFileName());
 
@@ -51,7 +52,9 @@ void OperationFile::addOperationToFile(Operation operation){
     xml.AddElem("userID", operation.getUserID());
     xml.AddElem("date", operation.getDate());
     xml.AddElem("item", operation.getItem());
-    xml.AddElem("amount", operation.getAmount());
+
+    amount << operation.getAmount();
+    xml.AddElem("amount", amount.str() );
     xml.Save(getFileName());
     lastOperationID++;
 }

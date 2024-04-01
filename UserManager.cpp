@@ -115,6 +115,7 @@ void UserManager::logout() {
 
 void UserManager::changePassword() {
     string newPassword = "";
+    Menus::showTitle("CHANGE PASSWORD");
     cout << "New password: ";
     newPassword = Utils::getLine();
 

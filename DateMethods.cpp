@@ -48,7 +48,7 @@ int DateMethods::getDate() {
 
             if( year > 1900 && year <= (aTime->tm_year + 1900) ) {
                 if( month > 0 && month <= 12 ) {
-                    if( day > 0 && day <= daysInMonth(year, month, day) ) {
+                    if( day > 0 && day <= daysInMonth(year, month) ) {
                         dateCorrect = true;
                     } else {
                         cout << "This day is not in calendar: " << day << endl;
@@ -70,10 +70,14 @@ int DateMethods::getDate() {
 }
 
 int DateMethods::getTodayDate() {
+    int todayDay, todayMonth, todayYear;
     time_t theTime = time(NULL);
     struct tm *aTime = localtime(&theTime);
+    todayYear = aTime->tm_year + 1900;
+    todayMonth = aTime->tm_mon + 1;
+    todayDay = aTime->tm_mday;
 
-    int todaysDate = 0;
+    return (todayYear * 10000 + todayMonth * 100 + todayDay);
 }
 
 bool DateMethods::isYearLeap(int year) {
@@ -87,7 +91,7 @@ bool DateMethods::isYearLeap(int year) {
     return false;
 }
 
-int DateMethods::daysInMonth(int year, int month, int day) {
+int DateMethods::daysInMonth(int year, int month) {
     int numberOfDaysInMonth = 0;
 
     if(month ==  1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
@@ -102,4 +106,62 @@ int DateMethods::daysInMonth(int year, int month, int day) {
         }
     }
     return numberOfDaysInMonth;
+}
+
+int DateMethods::getCurrentMonthFirstDayDate() {
+    int day, month, year;
+    time_t theTime = time(NULL);
+    struct tm *aTime = localtime(&theTime);
+    year = aTime->tm_year + 1900;
+    month = aTime->tm_mon + 1;
+    day = 1;
+    return (year * 10000 + month * 100 + day);
+}
+
+int DateMethods::getPreviuseMonthFirstDayDate() {
+    int day, month, year;
+    time_t theTime = time(NULL);
+    struct tm *aTime = localtime(&theTime);
+    year = aTime->tm_year + 1900;
+    month = aTime->tm_mon + 1;
+    day = 1;
+    if(month == 1) {
+        year--;
+        month = 12;
+    } else {
+        month--;
+    }
+    return (year * 10000 + month * 100 + day);
+}
+
+int DateMethods::getPreviuseMonthLastDayDate() {
+    int month, year;
+    time_t theTime = time(NULL);
+    struct tm *aTime = localtime(&theTime);
+    year = aTime->tm_year + 1900;
+    month = aTime->tm_mon + 1;
+    if(month == 1) {
+        year--;
+        month = 12;
+    } else {
+        month--;
+    }
+    return (year * 10000 + month * 100 + daysInMonth(year, month));
+}
+
+string DateMethods::presentDateInFormat(int number) {
+    string date = to_string(number);
+    string year = "";
+    string month = "";
+    string day = "";
+    for(unsigned int i = 0; i < date.length(); i++) {
+        if( i < 4 ) {
+            year += date[i];
+        } else if(i >= 4 && i < 6 ) {
+            month += date[i];
+        } else if( i >= 6 ) {
+            day += date[i];
+        }
+    }
+    return (year + '-' + month + '-' + day);
 }

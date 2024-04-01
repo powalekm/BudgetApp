@@ -12,9 +12,13 @@ class DateMethods {
 
 public:
     int getDate();
-    int getTodayDate();
     bool isYearLeap(int year);
     bool isDateInputCorrect(string date);
-    int daysInMonth(int year, int month, int day);
+    int daysInMonth(int year, int month);
+    int getTodayDate();
+    int getCurrentMonthFirstDayDate();
+    int getPreviuseMonthFirstDayDate();
+    int getPreviuseMonthLastDayDate();
+    string presentDateInFormat(int number);
 };
 #endif

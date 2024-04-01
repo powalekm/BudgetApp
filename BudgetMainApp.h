@@ -34,5 +34,7 @@ public:
     void addIncome();
     void addExpense();
     void showCurrentMonthBalance();
+    void showPreviousMonthBalance();
+    void showCustomPeriodBalance();
 };
 #endif

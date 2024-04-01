@@ -34,3 +34,4 @@ void Menus::showNewOperationMenu() {
     cout << "2. Enter a different date" << endl;
     cout << "-----------------------" << endl;
     cout << "Your choice: ";
+}

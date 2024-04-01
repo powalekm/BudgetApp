@@ -49,4 +49,14 @@ void BudgetMainApp::showCurrentMonthBalance(){
     }
 }
 
+void BudgetMainApp::showPreviousMonthBalance(){
+    if (userManager.isUserLoggedIn()) {
+        budgetManager->showPreviousMonthBalance();
+    }
+}
 
+void BudgetMainApp::showCustomPeriodBalance(){
+    if (userManager.isUserLoggedIn()) {
+        budgetManager->showCustomPeriodBalance();
+    }
+}
