@@ -40,6 +40,8 @@ User UserManager::setNewUserData() {
     User user;
     user.setUserID(getNewUserID());
 
+    system("cls");
+    cout << " >>> New User <<<" << endl << endl;
     cout << "First name: ";
     user.setFirstName(Utils::getLine());
     cout << "Last name: ";
@@ -108,10 +110,12 @@ void UserManager::loginUser() {
 
 void UserManager::logout() {
     loggedUserID = 0;
+    cout << "You are correctly logged out." << endl;
 }
 
 void UserManager::changePassword() {
     string newPassword = "";
+    Menus::showTitle("CHANGE PASSWORD");
     cout << "New password: ";
     newPassword = Utils::getLine();
 
@@ -123,5 +127,7 @@ void UserManager::changePassword() {
             system("pause");
         }
     }
-
+}
+int UserManager::getLoggedUserID() {
+    return loggedUserID;
 }
