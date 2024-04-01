@@ -15,7 +15,7 @@ void BudgetManager::addExpense() {
     const Type &type = EXPENSE;
     Operation operation = setNewOperation(type);
 
-    incomes.push_back(operation);
+    expenses.push_back(operation);
     expensesFile.addOperationToFile(operation);
     cout << endl << "New income has been created." << endl << endl;
     system("pause");
@@ -70,44 +70,50 @@ void BudgetManager::showBalace(int startDate, int endDate) {
     double incomesBalance = 0;
     double expensesBalance = 0;
 
-    if (incomes.empty()) {
-        cout << "There is no incomes." << endl;
-    } else {
+    if(startDate < endDate) {
+
         system("cls");
         Menus::showTitle("BALANCE");
         cout << "FROM " << dateMethods.presentDateInFormat(startDate) << " TO " << dateMethods.presentDateInFormat(endDate) << endl;
-        cout << endl << "-------INCOMES---------";
-        sort(begin(incomes), std::end(incomes), [](Operation& left, Operation& right) {
-            return left.getDate() > right.getDate();
-        });
-        for(unsigned int i = 0; i < incomes.size(); i++) {
-            if(incomes[i].getDate() >= startDate && incomes[i].getDate() <= endDate) {
-                cout << endl << "Income ID: " << incomes[i].getID() << " Date: " << dateMethods.presentDateInFormat(incomes[i].getDate())
-                     << " Amount: " << incomes[i].getAmount() << " Item: " << incomes[i].getItem();
-                incomesBalance += incomes[i].getAmount();
+
+        if (incomes.empty()) {
+            cout << "There is no incomes." << endl;
+        } else {
+            cout << endl << "-------INCOMES---------";
+            sort(begin(incomes), std::end(incomes), [](Operation& left, Operation& right) {
+                return left.getDate() > right.getDate();
+            });
+            for(unsigned int i = 0; i < incomes.size(); i++) {
+                if(incomes[i].getDate() >= startDate && incomes[i].getDate() <= endDate) {
+                    cout << endl << "Income ID: " << incomes[i].getID() << " Date: " << dateMethods.presentDateInFormat(incomes[i].getDate())
+                         << " Amount: " << incomes[i].getAmount() << " Item: " << incomes[i].getItem();
+                    incomesBalance += incomes[i].getAmount();
+                }
             }
+            cout << endl << endl << "Balance: " << incomesBalance << endl;
+            cout << "-----------------------" << endl;
         }
-        cout << endl << endl << "Balance: " << incomesBalance << endl;
-        cout << "-----------------------" << endl;
-    }
-    if (expenses.empty()) {
-        cout << "There is no expenses." << endl;
-    } else {
-        cout << endl << "-------EXPENSES--------";
-        sort(begin(expenses), std::end(expenses), [](Operation& left, Operation& right) {
-            return left.getDate() > right.getDate();
-        });
-        for(unsigned int i = 0; i < expenses.size(); i++) {
-            if(expenses[i].getDate() >= startDate && expenses[i].getDate() <= endDate) {
-                cout << endl << "Income ID: " << expenses[i].getID() << " Date: " << dateMethods.presentDateInFormat(expenses[i].getDate())
-                     << " Amount: " << expenses[i].getAmount() << " Item: " << expenses[i].getItem();
-                expensesBalance += expenses[i].getAmount();
+        if (expenses.empty()) {
+            cout << "There is no expenses." << endl;
+        } else {
+            cout << endl << "-------EXPENSES--------";
+            sort(begin(expenses), std::end(expenses), [](Operation& left, Operation& right) {
+                return left.getDate() > right.getDate();
+            });
+            for(unsigned int i = 0; i < expenses.size(); i++) {
+                if(expenses[i].getDate() >= startDate && expenses[i].getDate() <= endDate) {
+                    cout << endl << "Income ID: " << expenses[i].getID() << " Date: " << dateMethods.presentDateInFormat(expenses[i].getDate())
+                         << " Amount: " << expenses[i].getAmount() << " Item: " << expenses[i].getItem();
+                    expensesBalance += expenses[i].getAmount();
+                }
             }
+            cout << endl << endl << "Balance: " << expensesBalance << endl;
+            cout << "-----------------------" << endl;
         }
-        cout << endl << endl << "Balance: " << expensesBalance << endl;
-        cout << "-----------------------" << endl;
         cout << "Total balance: " << incomesBalance - expensesBalance << endl;
         cout << "-----------------------" << endl;
+    } else {
+        cout << "The dates are incorrect." << endl;
     }
     system("pause");
 }
